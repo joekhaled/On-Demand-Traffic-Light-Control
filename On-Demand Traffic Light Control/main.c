@@ -1,16 +1,11 @@
-#include <stdio.h>
-#include <avr/io.h>
-#include <avr/interrupt.h>
-#include <util/delay.h>
+#include "Source/APP/Led_Blink.h"
 
-void initIO(void) {
-	
-}
-
-int main(void) {
-	initIO();
-
-	while (1) {
-	}
-	return 0; // never reached
+int main(void)
+{
+    Blink_LED_Init();
+        
+    while (1)
+    {
+        Blink_LED_Update();
+    }
 }
